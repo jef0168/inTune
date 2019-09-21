@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
+import './App.scss';
+import {Login} from "./components/login/index"
 
 //Components
 import Navbar from './components/Navbar';
@@ -18,7 +19,9 @@ function App() {
     <div className="App">
       {/* Used for the path at the end of the url to navigate to the different .js files i have in the pages folder */}
       <Router>
-      <Navbar />
+        <div className="nav">
+          {/* <Navbar /> */}
+        </div>
         <div className="container">
           <Switch>
             <Route exact path="/" component={home} />
