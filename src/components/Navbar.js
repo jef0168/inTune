@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Link from 'react-router-dom/Link';
 //images
-import logo from './logo150.png'
-import likes from './Clef-Note.png'
-import profile from './profile.png'
-import explore from './explore.png'
+import logo from './images/logo150.png'
+import likes from './images/Clef-Note.png'
+import profile from './images/profile.png'
+import explore from './images/explore.png'
 //Material UI 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import SearchIcon from '@material-ui/icons/Search'
-import InputBase from '@material-ui/core/InputBase';
+// import SearchIcon from '@material-ui/icons/Search'
+// import InputBase from '@material-ui/core/InputBase';
 
 
 export class Navbar extends Component {
@@ -20,7 +20,7 @@ export class Navbar extends Component {
               <AppBar color='default' className='appBar' style={{ backgroundColor: '#ffff' }}>
                 <Toolbar className='nav-container'>
                     <div className="logo">
-                        <img src={logo} alt='Logo'/>
+                        <Button color = "inherit" component={Link} to="/"><img src={logo} alt='Logo'/></Button>
                     </div>
                     <div className="search">
                         {/* <div className="searchIcon" >
