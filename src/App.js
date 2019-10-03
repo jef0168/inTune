@@ -1,14 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
-import { Login } from "./components/login/index"
 
 //Components
 import Navbar from './components/Navbar';
 
 //Pages
 import home from './pages/home';
-import login from './pages/login';
+import signin from './pages/signin';
 import explore from './pages/explore';
 import profile from './pages/profile';
 
@@ -21,7 +20,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route exact path="/" component={home} />
-            <Route exact path="/login" component={login} />
+            <Route exact path="/signin" component={signin} />
             <Route exact path="/explore" component={explore} />
             <Route exact path="/profile" component={profile} />
           </Switch>
