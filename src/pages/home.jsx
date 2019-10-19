@@ -9,13 +9,14 @@ import { mdiMusicNoteQuarter, mdiMusicNoteEighth, mdiMusicNoteSixteenth } from '
 export class home extends Component {
     constructor(props) {
         super(props);
-        this.routeChange = this.routeChange.bind(this);
+        this.routeChange = this.routeChange.bind(this)
     }
 
     routeChange() {
         let path = '/signin';
         this.props.history.push(path);
     }
+
     render() {
         return (
             <div className="home-base">
@@ -68,12 +69,10 @@ export class home extends Component {
                         <h2>Join inTune today</h2>
                     </div>
                     <div className="signin">
-                        <button type="button" id="loginButton" className="btn-login" onClick={
-                            this.routeChange
-                        }>Login</button>
+                        <button type="button" id="loginButton" className="btn-login" onClick={this.routeChange} > Login</button>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }

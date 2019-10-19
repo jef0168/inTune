@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from '../images/logo.png'
 
-export class Login extends React.Component {
+export class Login extends Component {
     constructor(props) {
         super(props);
     }
@@ -11,9 +11,13 @@ export class Login extends React.Component {
             <div className="header">Login</div>
             <div className="content">
                 <div className="image">
-                    <img src={logo} alt="logo" />
+                    <li>
+                        <a href="/">
+                            <img src={logo} alt="logo" />
+                        </a>
+                    </li>
                 </div>
-                <div className="form">
+                <form onSubmit={this.onSubmit} className="form">
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
                         <input type="text" name="username" placeholder="Username" />
@@ -22,10 +26,10 @@ export class Login extends React.Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" placeholder="Password" />
                     </div>
-                </div>
+                </form>
             </div>
             <div className="footer">
-                <button type="button" className="btn">Login</button>
+                <button type="submit" className="btn">Login</button>
             </div>
         </div>
     }

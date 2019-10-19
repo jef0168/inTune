@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import { Navbar } from '../components/Navbar'
+import { Navbar } from '../components/Navbar/Navbar'
+import { Post } from '../components/Post/postComponent'
 
 export class profile extends Component {
     render() {
         return (
             <div>
-                <div className="navBar">
-                    <Navbar />
-                </div>
-                <h1>profile Page</h1>
+                <Navbar />
+                <Post />
+                {/* <h1>profile Page</h1> */}
             </div>
         )
     }

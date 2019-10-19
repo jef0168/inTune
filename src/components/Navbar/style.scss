@@ -1,0 +1,92 @@
+.navBar{
+    height: 77px;
+    width: 100%;
+    display: flex;
+    padding-left: 100px;
+    border: 0 solid #d1d1d1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 1px;
+    justify-content: center;
+    align-items: center;
+    .containerNav{
+        // margin-right: 0;
+        // display: flex;
+        // flex-direction: row;
+        // align-items: center;
+        // width: 90%;
+        // text-align: center;
+        // justify-content: center;
+        // align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 77px;
+        justify-content: center;
+        max-width: 1010px;
+        transform: height .2s ease-in-out;
+        width: 100%;
+        .left{
+            flex: 1 9999 0%;
+            min-width: 40px;
+            .home{
+                .logo{
+                    justify-content: start;
+                    img{
+                        width: 20%;
+                        height: auto;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+        .middle{
+            height: 26px;
+            flex: 0 1 auto;
+            min-width: 120px;
+            width: 215px;
+            form{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        .right{
+            align-items: center;
+            flex: 1;
+            .buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: stretch;
+                .explore{
+                    padding-right: 10px;
+                }
+                .profile{
+                    padding-right: 10px;
+
+                }
+                .settings{
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+   .navBar{
+       .containerNav{
+           .left{
+                .home{
+                    .logo{
+                        img{
+                            height: auto;
+                            width: 45%;
+                        }
+                    }
+                }
+            }
+       }
+   } 
+}
