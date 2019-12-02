@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
@@ -7,26 +7,27 @@ import './App.scss';
 
 //Pages
 import home from './pages/home';
-import signin from './pages/signin';
+// import login from './pages/loginForm'
+import register from './components/auth/register'
 import explore from './pages/explore';
 import profile from './pages/profile';
 
-
 function App() {
   return (
-    <div className="App">
+    <Fragment>
       {/* Used for the path at the end of the url to navigate to the different .js files i have in the pages folder */}
       <Router>
-        <div className="container">
+        <div className='container'>
           <Switch>
-            <Route exact path="/" component={home} />
-            <Route exact path="/signin" component={signin} />
-            <Route exact path="/explore" component={explore} />
-            <Route exact path="/profile" component={profile} />
+            <Route exact path='/' component={home} />
+            {/* <Route exact path='/login' component={loginForm}/> */}
+            <Route exact path='/register' component={register}/>
+            <Route exact path='/explore' component={explore} />
+            <Route exact path='/profile' component={profile} />
           </Switch>
         </div>
       </Router>
-    </div>
+    </Fragment>
   );
 }
 
